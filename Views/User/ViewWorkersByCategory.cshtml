@@ -1,0 +1,21 @@
+﻿    @model List<FixMyTask_Core_Project.Models.WorkerModel>
+
+<h2>Workers in this Category</h2>
+
+<div class="row">
+    @foreach (var worker in Model)
+    {
+        <div class="col-md-3">
+            <div class="card mb-3" style="width: 275px;">
+                <img src="@worker.WorkerPhoto" class="card-img-top" alt="@worker.WorkerName" style="height: 217px;" />
+                <div class="card-body">
+                    <h5 class="card-title">@worker.WorkerName</h5>
+                    <h5 class="card-title">@worker.Category_Name</h5>
+                    <p class="card-text">@worker.WorkerExperience years experience</p>
+                    <p class="card-text">@worker.WorkerCity, @worker.WorkerState</p>
+                    <a href="@Url.Action("WorkerProfile", new { workerId = worker.WorkerId })" class="btn btn-primary">View Profile</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

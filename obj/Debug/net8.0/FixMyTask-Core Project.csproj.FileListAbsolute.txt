@@ -1,0 +1,39 @@
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\appsettings.Development.json
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\appsettings.json
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\FixMyTask-Core Project.staticwebassets.runtime.json
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\FixMyTask-Core Project.exe
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\FixMyTask-Core Project.deps.json
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\FixMyTask-Core Project.runtimeconfig.json
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\FixMyTask-Core Project.dll
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\FixMyTask-Core Project.pdb
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\System.Data.SqlClient.dll
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\runtimes\win-arm64\native\sni.dll
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\runtimes\win-x64\native\sni.dll
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\runtimes\win-x86\native\sni.dll
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\FixMyTask-Core Project.csproj.AssemblyReference.cache
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\FixMyTask-Core Project.GeneratedMSBuildEditorConfig.editorconfig
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\FixMyTask-Core Project.AssemblyInfoInputs.cache
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\FixMyTask-Core Project.AssemblyInfo.cs
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\FixMyTask-Core Project.csproj.CoreCompileInputs.cache
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\FixMyTask-Core Project.MvcApplicationPartsAssemblyInfo.cache
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\FixMyTask-Core Project.RazorAssemblyInfo.cache
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\FixMyTask-Core Project.RazorAssemblyInfo.cs
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\FixMyTask-Core Project.sourcelink.json
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\staticwebassets.build.json
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\staticwebassets.development.json
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\staticwebassets\msbuild.FixMyTask-Core Project.Microsoft.AspNetCore.StaticWebAssets.props
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\staticwebassets\msbuild.build.FixMyTask-Core Project.props
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.FixMyTask-Core Project.props
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FixMyTask-Core Project.props
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\staticwebassets.pack.json
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\scopedcss\bundle\FixMyTask-Core Project.styles.css
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\scopedcss\projectbundle\FixMyTask-Core Project.bundle.scp.css
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\FixMyTas.CA9FEFD4.Up2Date
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\FixMyTask-Core Project.dll
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\refint\FixMyTask-Core Project.dll
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\FixMyTask-Core Project.pdb
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\FixMyTask-Core Project.genruntimeconfig.cache
+F:\shammas\Luminar\FixMyTask-Core Project\FixMyTask-Core Project\obj\Debug\net8.0\ref\FixMyTask-Core Project.dll

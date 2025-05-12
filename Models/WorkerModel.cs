@@ -1,0 +1,21 @@
+﻿namespace FixMyTask_Core_Project.Models
+{
+    public class WorkerModel
+    {
+        public int WorkerId { get; set; }
+        public int CategoryId { get; set; }
+        public string? WorkerName { get; set; }
+        public string? Category_Name { get; set; }
+        public string? WorkerEmail { get; set; }
+        public string? WorkerPhoto { get; set; }
+        public string? WorkerSkills { get; set; }
+        public string? WorkerExperience { get; set; }
+        public string? WorkerRating { get; set; }
+        public string? WorkerCountry { get; set; }
+        public string? WorkerState { get; set; }
+        public string? WorkerCity { get; set; }
+        public string? WorkerPhone { get; set; }
+        
+        public string? WorkerAddress { get; set; }
+    }
+}

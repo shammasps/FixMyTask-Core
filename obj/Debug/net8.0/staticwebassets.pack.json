@@ -1,0 +1,345 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FixMyTask-Core Project.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FixMyTask-Core Project.bundle.scp.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\6102927934256955321.jpg",
+      "PackagePath": "staticwebassets\\img\\6102927934256955321.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\8f8136028574d696bb0a52c47d446415.jpg",
+      "PackagePath": "staticwebassets\\img\\8f8136028574d696bb0a52c47d446415.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\ChatGPT Image Apr 29, 2025, 06_59_06 PM.png",
+      "PackagePath": "staticwebassets\\img\\ChatGPT Image Apr 29, 2025, 06_59_06 PM.png"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\Electrician.jpg",
+      "PackagePath": "staticwebassets\\img\\Electrician.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\Hitman_2015.jpg",
+      "PackagePath": "staticwebassets\\img\\Hitman_2015.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\IMG_0045.JPG",
+      "PackagePath": "staticwebassets\\img\\IMG_0045.JPG"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\IMG_0264.jpg",
+      "PackagePath": "staticwebassets\\img\\IMG_0264.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\IMG_0277.jpg",
+      "PackagePath": "staticwebassets\\img\\IMG_0277.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\IMG_0295.jpg",
+      "PackagePath": "staticwebassets\\img\\IMG_0295.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\Screenshot 2025-05-11 181316.png",
+      "PackagePath": "staticwebassets\\img\\Screenshot 2025-05-11 181316.png"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\ac_technician.webp",
+      "PackagePath": "staticwebassets\\img\\ac_technician.webp"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\carpenter.jpg",
+      "PackagePath": "staticwebassets\\img\\carpenter.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\ed59935c-5313-4bd9-a8bb-39643eee400c.jpg",
+      "PackagePath": "staticwebassets\\img\\ed59935c-5313-4bd9-a8bb-39643eee400c.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\house_cleaning.jpg",
+      "PackagePath": "staticwebassets\\img\\house_cleaning.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\images.jpeg",
+      "PackagePath": "staticwebassets\\img\\images.jpeg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\painter.jpg",
+      "PackagePath": "staticwebassets\\img\\painter.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\pes.jpg",
+      "PackagePath": "staticwebassets\\img\\pes.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\plumber.jpg",
+      "PackagePath": "staticwebassets\\img\\plumber.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\vehicle_service.jpeg",
+      "PackagePath": "staticwebassets\\img\\vehicle_service.jpeg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\vehicle_washing.jpeg",
+      "PackagePath": "staticwebassets\\img\\vehicle_washing.jpeg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FixMyTask-Core Project.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.FixMyTask-Core Project.props",
+      "PackagePath": "build\\FixMyTask-Core Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.FixMyTask-Core Project.props",
+      "PackagePath": "buildMultiTargeting\\FixMyTask-Core Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.FixMyTask-Core Project.props",
+      "PackagePath": "buildTransitive\\FixMyTask-Core Project.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

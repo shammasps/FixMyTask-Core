@@ -1,0 +1,21 @@
+﻿@model List<FixMyTask_Core_Project.Models.Category>
+
+<h1>This is User Page</h1>
+
+<h2>Browse Categories</h2>
+
+<div class="row">
+    @foreach (var category in Model)
+    {
+        <div class="col-md-3">  
+            <div class="card">
+                <img src="~/img/@category.Category_Image" class="card-img-top" alt="@category.Category_Name">
+                <div class="card-body">
+                    <h5 class="card-title">@category.Category_Name</h5>
+                    <a href="@Url.Action("ViewWorkersByCategory", new { categoryId = category.Category_Id })" class="btn btn-primary">View Workers</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+    

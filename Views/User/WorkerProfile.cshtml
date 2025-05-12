@@ -1,0 +1,51 @@
+﻿@model FixMyTask_Core_Project.Models.WorkerModel
+
+<h2>@Model.WorkerName 's Profile</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <img src="@Model.WorkerPhoto" alt="@Model.WorkerName" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+        <h3>Employee Name : @Model.WorkerName</h3>
+        <h3>Category : @Model.Category_Name</h3>
+        <h4>Experience: @Model.WorkerExperience years</h4>
+        @* <h5>Rating: @Model.WorkerRating</h5> *@
+        <p>Phone: @Model.WorkerPhone</p>
+        <p>Email: @Model.WorkerEmail</p>
+        <p>Country: @Model.WorkerCountry</p>
+        <p>State: @Model.WorkerState</p>
+        <p>City: @Model.WorkerCity</p>
+        <p>Address: @Model.WorkerAddress</p>
+
+        <h5>Certificates:</h5>
+        <ul>
+            <li>Electrical Course Certificate</li>
+            <li>Degree Certificate</li>
+            <!-- You can dynamically fetch certificates from a separate table if needed -->
+        </ul>
+        <br />
+        <h3>Booking</h3>
+        <form asp-action="BookWorker" method="post">
+            <input type="hidden" name="WorkerId" value="@Model.WorkerId" />
+            <label for="ServiceDate">Select Service Date</label>
+            <input type="date" name="ServiceDate" class="form-control" required />
+
+            
+                <label for="ServiceTime">Select Time Slot</label>
+                <select name="ServiceTime" class="form-control" required>
+                    <option value="">-- Select Time Slot --</option>
+                    <option value="9:00 AM - 12:00 PM">9:00 AM - 12:00 PM</option>
+                    <option value="1:30 PM - 3:30 PM">1:30 PM - 3:30 PM</option>
+                    <option value="4:30 PM - 9:00 PM">4:30 PM - 9:00 PM</option>
+                </select>
+            <label for="Address">Enter Your Address</label>
+            <input type="text" name="User_Address" class="form-control" required />
+
+            <label for="Remarks">Remarks</label>
+            <input type="text" name="Remarks" class="form-control" required />
+
+            <button type="submit" class="btn btn-success mt-2">Book Now</button>
+        </form>
+    </div>
+</div>

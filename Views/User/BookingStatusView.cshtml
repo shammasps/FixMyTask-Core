@@ -11,13 +11,18 @@
 {
     <div class="alert alert-info">Booking placed successfully. Waiting for worker confirmation.</div>
 }
-else if (Model.Booking_Status == "Confirmed")
+else if (Model.Booking_Status == "Accepted")
 {
     <div class="alert alert-success">Booking confirmed by worker.</div>
-    @* <form asp-action="CompleteBooking" method="post">
-        <input type="hidden" name="bookingId" value="@Model.Booking_Id" />
-        <button type="submit" class="btn btn-warning">Worker: Mark as Completed</button>
-    </form> *@
+   
+}
+else if (Model.Booking_Status == "Reached")
+{
+    <div class="alert alert-success">Worker Reached Your Location.</div>
+}
+else if (Model.Booking_Status == "Rejected")
+{
+    <div class="alert alert-success">Booking rejected by worker.</div>
 }
 else if (Model.Booking_Status == "Completed" && Model.Paid == "No")
 {
@@ -31,3 +36,5 @@ else if (Model.Paid == "Yes")
 {
     <div class="alert alert-success">Payment completed. Thank you!</div>
 }
+
+<a href="@Url.Action("User_PageLoad", "User")" class="btn btn-success ml-2">Back</a>

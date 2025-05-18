@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\FixMyTask-Core Project.bundle.scp.css"
     },
     {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\.gitignore.txt",
+      "PackagePath": "staticwebassets\\.gitignore.txt"
+    },
+    {
       "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -41,6 +45,10 @@
       "PackagePath": "staticwebassets\\img\\IMG_0264.jpg"
     },
     {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\IMG_0273.jpg",
+      "PackagePath": "staticwebassets\\img\\IMG_0273.jpg"
+    },
+    {
       "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\IMG_0277.jpg",
       "PackagePath": "staticwebassets\\img\\IMG_0277.jpg"
     },
@@ -51,6 +59,10 @@
     {
       "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\Screenshot 2025-05-11 181316.png",
       "PackagePath": "staticwebassets\\img\\Screenshot 2025-05-11 181316.png"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\WhatsApp Image 2025-02-24 at 19.59.26_741ac476.jpg",
+      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2025-02-24 at 19.59.26_741ac476.jpg"
     },
     {
       "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\ac_technician.webp",

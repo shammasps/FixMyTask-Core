@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TBqdJvK/Dtsc2XyoqrB559lZ+M5oxmWHwtqMEqAiWNE=",
+  "Hash": "nhqj19fXiBa5BzdugPUl6DJp3qzqanfUCk8fVw1K+4s=",
   "Source": "FixMyTask-Core Project",
   "BasePath": "_content/FixMyTask-Core Project",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FixMyTask-Core Project.bundle.scp.css"
+    },
+    {
+      "Identity": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\.gitignore.txt",
+      "SourceId": "FixMyTask-Core Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\",
+      "BasePath": "_content/FixMyTask-Core Project",
+      "RelativePath": ".gitignore.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\.gitignore.txt"
     },
     {
       "Identity": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\css\\site.css",
@@ -321,6 +340,25 @@
       "OriginalItemSpec": "wwwroot\\img\\IMG_0264.jpg"
     },
     {
+      "Identity": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\IMG_0273.jpg",
+      "SourceId": "FixMyTask-Core Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\",
+      "BasePath": "_content/FixMyTask-Core Project",
+      "RelativePath": "img/IMG_0273.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\IMG_0273.jpg"
+    },
+    {
       "Identity": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\IMG_0277.jpg",
       "SourceId": "FixMyTask-Core Project",
       "SourceType": "Discovered",
@@ -471,6 +509,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\vehicle_washing.jpeg"
+    },
+    {
+      "Identity": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\WhatsApp Image 2025-02-24 at 19.59.26_741ac476.jpg",
+      "SourceId": "FixMyTask-Core Project",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\",
+      "BasePath": "_content/FixMyTask-Core Project",
+      "RelativePath": "img/WhatsApp Image 2025-02-24 at 19.59.26_741ac476.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\WhatsApp Image 2025-02-24 at 19.59.26_741ac476.jpg"
     },
     {
       "Identity": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\js\\site.js",

@@ -1,0 +1,106 @@
+﻿@* @model FixMyTask_Core_Project.Models.WorkerModel
+
+<form asp-action="EditProfileClick" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="WorkerId" />
+
+    <label>Email</label>
+    <input asp-for="WorkerEmail" class="form-control" />
+
+    <label>Phone</label>
+    <input asp-for="WorkerPhone" class="form-control" />
+
+    <label>Address</label>
+    <textarea asp-for="WorkerAddress" class="form-control"></textarea>
+
+    <label>Country</label>
+    <input asp-for="WorkerCountry" class="form-control" />
+
+    <label>State</label>
+    <input asp-for="WorkerState" class="form-control" />
+
+    <label>City</label>
+    <input asp-for="WorkerCity" class="form-control" />
+
+    <label>Experience</label>
+    <input asp-for="WorkerExperience" class="form-control" />
+
+    <label>Price</label>
+    <input asp-for="WorkerPrice" class="form-control" />
+
+    <label>Description</label>
+    <input asp-for="WorkerDescription" class="form-control" />
+
+    <label>Profile Photo</label><br />
+    @if (!string.IsNullOrEmpty(Model.WorkerPhoto))
+    {
+        <img src="@Model.WorkerPhoto" width="100" />
+    }
+    <input asp-for="PhotoFile" type="file" class="form-control" />
+
+    <button type="submit" class="btn btn-success mt-2">Update</button>
+</form>
+ *@
+
+@model FixMyTask_Core_Project.Models.WorkerModel
+<form asp-action="EditProfileClick" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="WorkerId" />
+
+    <div class="row">
+        <!-- Left Side: Image -->
+        <div class="col-md-4 text-center">
+            <label>Profile Photo</label><br />
+            @if (!string.IsNullOrEmpty(Model.WorkerPhoto))
+            {
+                <img src="@Model.WorkerPhoto" width="300" class="img-thumbnail mb-2" />
+            }
+            <input name="file" type="file" class="form-control" />
+        </div>
+
+        <!-- Right Side: Form Fields -->
+        <div class="col-md-8">
+            <div class="form-group">
+                <label>Email</label>
+                <input asp-for="WorkerEmail" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Phone</label>
+                <input asp-for="WorkerPhone" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Address</label>
+                <textarea asp-for="WorkerAddress" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Country</label>
+                <input asp-for="WorkerCountry" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>State</label>
+                <input asp-for="WorkerState" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>City</label>
+                <input asp-for="WorkerCity" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Experience</label>
+                <input asp-for="WorkerExperience" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input asp-for="WorkerPrice" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea asp-for="WorkerDescription" class="form-control"></textarea>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3 text-center">
+        <button type="submit" class="btn btn-success">Update</button>
+        <a href="@Url.Action("Worker_PageLoad", "Worker")" class="btn btn-success">Back</a>
+    </div>
+</form>
+

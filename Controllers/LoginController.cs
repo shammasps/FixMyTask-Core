@@ -16,10 +16,10 @@ namespace FixMyTask_Core_Project.Controllers
         //    return View();
         //}
 
-        public IActionResult WorkerHome()
-        {
-            return View();
-        }
+        //public IActionResult WorkerHome()
+        //{
+        //    return View();
+        //}
 
 
         public IActionResult Login_Click(Login clsobj)
@@ -42,7 +42,7 @@ namespace FixMyTask_Core_Project.Controllers
                         }
                         else if(userType== "Worker")
                         {
-                            return RedirectToAction("WorkerHome");
+                            return RedirectToAction("Worker_PageLoad","Worker");
                         }
                         
                     }

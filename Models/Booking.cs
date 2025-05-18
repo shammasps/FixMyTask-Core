@@ -13,5 +13,8 @@
         public string? Paid { get; set; }
         public string? Booking_Status { get; set; }
 
+        public string? UserName { get; set; }
+        public string? CategoryName { get; set; }
+
     }
 }

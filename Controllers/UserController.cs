@@ -34,7 +34,7 @@ namespace FixMyTask_Core_Project.Controllers
             if (ModelState.IsValid)
             {
                 var userId = HttpContext.Session.GetInt32("uid");
-                booking.Worker_Id=
+                
                 booking.User_Id = Convert.ToInt32(userId);
                 booking.Booking_Date = DateTime.Now;
                 booking.Booking_Status = "Pending";
@@ -49,7 +49,54 @@ namespace FixMyTask_Core_Project.Controllers
         public IActionResult BookingStatusView(int bookingId)
         {
             var booking=db.GetBookingById(bookingId);
+            return View(booking);   
+        }
+
+        public IActionResult BookingStatusViewWorker(int workerId)
+        {
+            var userId =Convert.ToInt32(HttpContext.Session.GetInt32("uid"));
+            var booking = db.GetBookingByUserAndWorker(userId, workerId);
             return View(booking);
+        }
+        public IActionResult WithdrawBooking(int bookingId)
+        {
+           
+            var booking = db.GetBookingById(bookingId);
+            var deleteBooking = db.DeleteBooking(bookingId);
+            return RedirectToAction("BookingStatusViewWorker", new {workerId=booking.Worker_Id});
+        }
+        public IActionResult MakePayment(int bookingId)
+        {
+            var booking = db.GetBookingById(bookingId);
+            var CompleteWorkStatus = db.UpdatePaymentStatus(bookingId, "Yes");
+            return RedirectToAction("BookingStatusViewWorker", new { workerId = booking.Worker_Id });
+        }
+        [HttpGet]
+        public IActionResult Review(int workerId,int userId,int bookingId)
+        {
+            UserReview model = new UserReview
+            {
+                Worker_Id = workerId,
+                User_Id = userId,
+                Booking_Id = bookingId
+            };
+
+            return View(model);
+        }
+        [HttpPost]
+        public IActionResult SubmitReview(UserReview model)
+        {
+            if (ModelState.IsValid)
+            {
+                var review = db.SaveUserReview(model);
+                return RedirectToAction("BookingStatusViewWorker", new { workerId = model.Worker_Id });
+            }
+            return RedirectToAction("Review", model);
+        }
+        public IActionResult ShowReview(int workerId)
+        {
+            var ShowReview = db.GetReviewbyWorker(workerId);
+            return View(ShowReview);
         }
 
 

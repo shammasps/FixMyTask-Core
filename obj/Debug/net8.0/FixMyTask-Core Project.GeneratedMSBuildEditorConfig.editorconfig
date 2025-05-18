@@ -50,6 +50,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCb29raW5nU3RhdHVzVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/shammas/Luminar/FixMyTask-Core Project/FixMyTask-Core Project/Views/User/BookingStatusViewWorker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCb29raW5nU3RhdHVzVmlld1dvcmtlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/shammas/Luminar/FixMyTask-Core Project/FixMyTask-Core Project/Views/User/BookWorker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxCb29rV29ya2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/shammas/Luminar/FixMyTask-Core Project/FixMyTask-Core Project/Views/User/Review.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZXZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/shammas/Luminar/FixMyTask-Core Project/FixMyTask-Core Project/Views/User/ShowReview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTaG93UmV2aWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/shammas/Luminar/FixMyTask-Core Project/FixMyTask-Core Project/Views/User/User_PageLoad.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyX1BhZ2VMb2FkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,6 +80,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/shammas/Luminar/FixMyTask-Core Project/FixMyTask-Core Project/Views/WorkerReg/WorkerReg_PageLoad.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya2VyUmVnXFdvcmtlclJlZ19QYWdlTG9hZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/shammas/Luminar/FixMyTask-Core Project/FixMyTask-Core Project/Views/Worker/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya2VyXEVkaXRQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/shammas/Luminar/FixMyTask-Core Project/FixMyTask-Core Project/Views/Worker/ManageBookingStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya2VyXE1hbmFnZUJvb2tpbmdTdGF0dXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/shammas/Luminar/FixMyTask-Core Project/FixMyTask-Core Project/Views/Worker/Reviews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya2VyXFJldmlld3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/shammas/Luminar/FixMyTask-Core Project/FixMyTask-Core Project/Views/Worker/ViewBookingRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya2VyXFZpZXdCb29raW5nUmVxdWVzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/shammas/Luminar/FixMyTask-Core Project/FixMyTask-Core Project/Views/Worker/Worker_PageLoad.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya2VyXFdvcmtlcl9QYWdlTG9hZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/shammas/Luminar/FixMyTask-Core Project/FixMyTask-Core Project/Views/_ViewImports.cshtml]

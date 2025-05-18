@@ -343,7 +343,7 @@ namespace FixMyTask_Core_Project.Models
                         Category_Name = dr["Category_Name"].ToString(),
                         WorkerEmail = dr["Worker_Email"].ToString(),
                         WorkerPhoto = dr["Worker_Photo"].ToString(),
-                        WorkerExperience = dr["Exp_Years"].ToString(),
+                        WorkerExperience = Convert.ToInt32(dr["Exp_Years"]),
                         WorkerCountry = dr["Worker_Country"].ToString(),
                         WorkerState = dr["Worker_State"].ToString(),
                         WorkerCity = dr["Worker_City"].ToString(),
@@ -385,12 +385,12 @@ namespace FixMyTask_Core_Project.Models
                         Category_Name = dr["Category_Name"].ToString(),
                         WorkerEmail = dr["Worker_Email"].ToString(),
                         WorkerPhoto = dr["Worker_Photo"].ToString(),
-                        WorkerExperience = dr["Exp_Years"].ToString(),
+                        WorkerExperience = Convert.ToInt32(dr["Exp_Years"]),
                         WorkerCountry = dr["Worker_Country"].ToString(),
                         WorkerState = dr["Worker_State"].ToString(),
                         WorkerCity = dr["Worker_City"].ToString(),
                         WorkerPhone = dr["Worker_Phone"].ToString(),
-                        WorkerAddress = dr["Worker_Address"].ToString(),
+                        WorkerAddress = dr["Worker_Address"].ToString()                        
 
                     };
                 }
@@ -484,13 +484,82 @@ namespace FixMyTask_Core_Project.Models
                 throw new Exception("Error: " + ex.Message);
             }
         }
+        
+
+
+        public List<Booking> GetBookingByUserAndWorker(int userId,int workerId)
+        {
+            List<Booking> bookings = new List<Booking>();
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("sp_getBookingByUserAndWorker", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@uid", userId);
+                cmd.Parameters.AddWithValue("@wid", workerId);
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                
+                while (dr.Read())
+                {
+                    Booking d = new Booking{
+                        Booking_Id = Convert.ToInt32(dr["Booking_Id"]),
+                        Worker_Id = Convert.ToInt32(dr["Worker_Id"]),
+                        User_Id = Convert.ToInt32(dr["User_Id"]),
+                        Booking_Date = Convert.ToDateTime(dr["Booking_Date"]),
+                        ServiceDate = Convert.ToDateTime(dr["ServiceDate"]),
+                        ServiceTime = dr["ServiceTime"].ToString(),
+                        User_Address = dr["User_Address"].ToString(),
+                        Remarks = dr["Remarks"].ToString(),
+                        Paid = dr["Paid"].ToString(),
+                        Booking_Status = dr["Booking_Status"].ToString(),
+                    };
+                    bookings.Add(d);
+
+                }
+                con.Close();
+                return bookings;
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+                throw new Exception("Error: " + ex.Message);
+            }
+        }
+
+        public string DeleteBooking(int bookingId)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("sp_bookingDelate", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@bid", bookingId);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                return "Booking Delete successfully";
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+                return ex.Message.ToString();
+            }
+        }
 
         public string SaveUserReview(UserReview clsobj)
         {
             try
             {
 
-                SqlCommand cmd = new SqlCommand("sp_bookingDetails", con);
+                SqlCommand cmd = new SqlCommand("sp_reviewInsert", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@wid", clsobj.Worker_Id);
                 cmd.Parameters.AddWithValue("@uid", clsobj.User_Id);
@@ -513,5 +582,304 @@ namespace FixMyTask_Core_Project.Models
                 return ex.Message.ToString();
             }
         }
+
+        public WorkerModel GetWorkerById(int workerId)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("sp_getWorkerById", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@wid", workerId);
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                WorkerModel worker = new WorkerModel();
+                while (dr.Read())
+                {
+                    worker = new WorkerModel
+                    {
+                        WorkerId = Convert.ToInt32(dr["Worker_Id"]),
+                        WorkerName = dr["Worker_Name"].ToString(),
+                        WorkerEmail = dr["Worker_Email"].ToString(),
+                        WorkerPhone = dr["Worker_Phone"].ToString(),
+                        WorkerPhoto = dr["Worker_Photo"].ToString(),
+                        WorkerAddress = dr["Worker_Address"].ToString(),
+                        WorkerExperience = Convert.ToInt32( dr["Exp_Years"]),
+                        WorkerDescription = dr["Description"].ToString(),
+                        WorkerPrice = Convert.ToInt64(dr["Price"]),
+                        WorkerGender = dr["Worker_Gender"].ToString(),
+                        WorkerCountry = dr["Worker_Country"].ToString(),
+                        WorkerState = dr["Worker_State"].ToString(),
+                        WorkerCity = dr["Worker_City"].ToString()
+
+                    };
+                }
+                con.Close();
+                return worker;
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+                throw new Exception("Error: " + ex.Message);
+            }
+        }
+
+        public List<Booking> GetBookingByStatus(int workerId,string status)
+        {
+            try
+            {
+                List<Booking> booking = new List<Booking>();
+                SqlCommand cmd = new SqlCommand("sp_getBookingStatus", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@wid", workerId);
+                cmd.Parameters.AddWithValue("@status", status);
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Booking b = new Booking
+                    {
+                        Booking_Id = Convert.ToInt32(dr["Booking_Id"]),
+                        Worker_Id = Convert.ToInt32(dr["Worker_Id"]),
+                        User_Id = Convert.ToInt32(dr["User_Id"]),
+                        UserName = dr["User_Name"].ToString(),
+                        CategoryName = dr["Category_Name"].ToString(),
+                        Booking_Date = Convert.ToDateTime(dr["Booking_Date"]),
+                        ServiceDate = Convert.ToDateTime(dr["ServiceDate"]),
+                        ServiceTime = dr["ServiceTime"].ToString(),
+                        User_Address = dr["User_Address"].ToString(),
+                        Remarks = dr["Remarks"].ToString(),
+                        Paid = dr["Paid"].ToString(),
+                        Booking_Status = dr["Booking_Status"].ToString(),
+                    };
+                    booking.Add(b);
+
+                }
+                con.Close();
+                return booking;
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+                throw new Exception("Error: " + ex.Message);
+            }
+        }
+
+
+        public string UpdateBookingStatus(int bookingId,string status)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("sp_updateBookingStatus", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@bid", bookingId);
+                cmd.Parameters.AddWithValue("@status", status);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return ("Insert Successfully");
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+                return ex.Message.ToString();
+            }
+        }
+
+        public List<Booking> GetWorkerBookings(int workerId)
+        {
+            try
+            {
+                List<Booking> booking = new List<Booking>();
+                SqlCommand cmd = new SqlCommand("sp_getWorkerByBooking", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@wid", workerId);
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Booking b=new Booking
+                    {
+                        Booking_Id = Convert.ToInt32(dr["Booking_Id"]),
+                        Worker_Id = Convert.ToInt32(dr["Worker_Id"]),
+                        User_Id = Convert.ToInt32(dr["User_Id"]),
+                        Booking_Date = Convert.ToDateTime(dr["Booking_Date"]),
+                        ServiceDate = Convert.ToDateTime(dr["ServiceDate"]),
+                        ServiceTime = dr["ServiceTime"].ToString(),
+                        User_Address = dr["User_Address"].ToString(),
+                        Remarks = dr["Remarks"].ToString(),
+                        Paid = dr["Paid"].ToString(),
+                        Booking_Status = dr["Booking_Status"].ToString(),
+                    };
+                    booking.Add(b);
+
+                }
+                con.Close();
+                return booking;
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+                throw new Exception("Error: " + ex.Message);
+            }
+        }
+
+        public List<Booking> GetWorkerActiveBookings(int workerId)
+        {
+            try
+            {
+                List<Booking> booking = new List<Booking>();
+                SqlCommand cmd = new SqlCommand("sp_getWorkerActiveBookings", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@wid", workerId);
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Booking b = new Booking
+                    {
+                        Booking_Id = Convert.ToInt32(dr["Booking_Id"]),
+                        Worker_Id = Convert.ToInt32(dr["Worker_Id"]),
+                        User_Id = Convert.ToInt32(dr["User_Id"]),
+                        UserName = dr["User_Name"].ToString(),
+                        CategoryName = dr["Category_Name"].ToString(),
+                        Booking_Date = Convert.ToDateTime(dr["Booking_Date"]),
+                        ServiceDate = Convert.ToDateTime(dr["ServiceDate"]),
+                        ServiceTime = dr["ServiceTime"].ToString(),
+                        User_Address = dr["User_Address"].ToString(),
+                        Remarks = dr["Remarks"].ToString(),
+                        Paid = dr["Paid"].ToString(),
+                        Booking_Status = dr["Booking_Status"].ToString()
+                    };
+                    booking.Add(b);
+
+                }
+                con.Close();
+                return booking;
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+                throw new Exception("Error: " + ex.Message);
+            }
+        }
+
+        public string UpdatePaymentStatus(int bookingId, string paid)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("sp_moneyReceived", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@bid", bookingId);
+                cmd.Parameters.AddWithValue("@paid", paid);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return ("Update Successfully");
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+                return ex.Message.ToString();
+            }
+        }
+
+        public string UpdateWorkerDetails(WorkerModel model)
+        {
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("sp_workerUpdate", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@wid", model.WorkerId);
+                cmd.Parameters.AddWithValue("@wemail", model.WorkerEmail);
+                cmd.Parameters.AddWithValue("@wphone", model.WorkerPhone);
+                cmd.Parameters.AddWithValue("@wphoto", model.WorkerPhoto);
+                cmd.Parameters.AddWithValue("@waddress", model.WorkerAddress);
+                cmd.Parameters.AddWithValue("@wcountry", model.WorkerCountry);
+                cmd.Parameters.AddWithValue("@wstate", model.WorkerState);
+                cmd.Parameters.AddWithValue("@wcity", model.WorkerCity);
+                cmd.Parameters.AddWithValue("@wexp", model.WorkerExperience);
+                cmd.Parameters.AddWithValue("@price", model.WorkerPrice);
+                cmd.Parameters.AddWithValue("@wdescription", model.WorkerDescription);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return ("Update Successfully");
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+                return ex.Message.ToString();
+            }
+        }
+
+
+        public List<UserReviewModel> GetReviewbyWorker(int workerId)
+        {
+            try
+            {
+                List<UserReviewModel> review=new List<UserReviewModel>();
+
+                SqlCommand cmd = new SqlCommand("sp_getReview", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@wid", workerId);
+                con.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    UserReviewModel r=new UserReviewModel
+                    {
+                        Worker_Id = Convert.ToInt32(dr["Worker_Id"]),
+                        User_Id = Convert.ToInt32(dr["User_Id"]),
+                        Booking_Id = Convert.ToInt32(dr["Booking_Id"]),
+                        Review = dr["Review"].ToString(),
+                        Rating = Convert.ToInt32(dr["Rating"]),
+                        ReviewDate = Convert.ToDateTime(dr["ReviewDate"]),
+                        WorkerName = dr["Worker_Name"].ToString(),
+                        User_Name = dr["User_Name"].ToString()
+
+                    };
+                    review.Add(r);
+                }
+                con.Close();
+                return review;
+            }
+            catch (Exception ex)
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+                throw new Exception("Error: " + ex.Message);
+            }
+        }
+
+
     }
 }

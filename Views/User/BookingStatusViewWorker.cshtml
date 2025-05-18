@@ -1,0 +1,92 @@
+﻿
+@model List<FixMyTask_Core_Project.Models.Booking>
+<h2>Booking Status</h2>
+
+@if (Model == null)
+{
+    <div class="alert alert-warning">You haven’t booked this worker yet.</div>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Service Date</th>
+                <th>Service Time</th>
+                <th>Booking Status</th>
+                <th>Paid</th>
+                <th>Remarks</th>
+                <th>Message</th>
+                <th>Action</th>
+                <th>Add Review</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var booking in Model)
+            {
+                <tr>
+                    <td>@booking.ServiceDate.ToShortDateString()</td>
+                    <td>@booking.ServiceTime</td>
+                    <td>@booking.Booking_Status</td>
+                    <td>@booking.Paid</td>
+                    <td>@booking.Remarks</td>
+                    <td>
+                        @if (booking.Booking_Status == "Pending")
+                        {
+                            <span class="text-info">Booking placed successfully. Waiting for worker confirmation.</span>
+                        }
+                        else if (booking.Booking_Status == "Accepted")
+                        {
+                            <span class="text-success">Booking confirmed by worker.</span>
+                        }
+                        else if (booking.Booking_Status == "Reached")
+                        {
+                            <span class="text-success">Worker Reached Your Location.</span>
+                        }
+                        else if (booking.Booking_Status == "Rejected")
+                        {
+                            <span class="text-danger">Booking rejected by worker.</span>
+                        }
+                        else if (booking.Booking_Status == "Completed" && booking.Paid == "No")
+                        {
+                            <span class="text-success">Work completed. Please proceed with payment.</span>
+                        }
+                        else if (booking.Paid == "Yes")
+                        {
+                            <span class="text-success">Payment completed. Thank you!</span>
+                        }
+                    </td>
+                    <td>
+                        @if (booking.Booking_Status == "Pending" || booking.Booking_Status == "Rejected")
+                        {
+                            <form asp-action="WithdrawBooking" method="post">
+                                <input type="hidden" name="bookingId" value="@booking.Booking_Id" />
+                                <button type="submit" class="btn btn-warning btn-sm">Withdraw</button>
+                            </form>
+                        }
+                        else if (booking.Booking_Status == "Completed" && booking.Paid == "No")
+                        {
+                            <form asp-action="MakePayment" method="post">
+                                <input type="hidden" name="bookingId" value="@booking.Booking_Id" />
+                                <button type="submit" class="btn btn-primary btn-sm">Pay Now</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <span class="text-muted">-</span>
+                        }
+                    </td>
+                    <td>
+                        @if (booking.Booking_Status == "Completed")
+                        {
+                            <a href="@Url.Action("Review", "User",new {workerId=booking.Worker_Id,userId=booking.User_Id,bookingId=booking.Booking_Id})" class="btn btn-success">Review</a>
+                        }
+                    </td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="@Url.Action("User_PageLoad", "User")" class="btn btn-success mt-3">Back</a>
+}

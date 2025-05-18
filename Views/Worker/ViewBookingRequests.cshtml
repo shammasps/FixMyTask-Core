@@ -1,0 +1,54 @@
+﻿@model List<FixMyTask_Core_Project.Models.Booking>
+
+@if (Model.Count == 0)
+{
+    <p>No Job Requests Available</p>
+}
+else
+{
+    <div>
+    <h2>Booking Requests</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                
+                <th>Client Name</th>
+                <th>Category</th>
+                <th>Booking_Date</th>
+                <th>ServiceDate</th>
+                <th>ServiceTime</th>
+                <th>User_Address</th>
+                <th>Remarks</th>
+                <th>Paid</th>
+                <th>Status</th>
+                <th>Action</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var booking in Model)
+            {
+                <tr>
+                    <td>@booking.UserName</td>
+                    <td>@booking.CategoryName</td>
+                    <td>@booking.Booking_Date.ToShortDateString()</td>
+                    <td>@booking.ServiceDate.ToShortDateString()</td>
+                    <td>@booking.ServiceTime</td>
+                    <td>@booking.User_Address</td>
+                    <td>@booking.Remarks</td>
+                    <td>@booking.Paid</td>
+                    <td>@booking.Booking_Status</td>
+                    <td>  
+                    <a href="@Url.Action("AcceptBooking", "Worker", new { bookingId= booking.Booking_Id })" class="btn btn-success">Accept</a>
+                    </td>
+                    <td>
+                    <a href="@Url.Action("RejectBooking", "Worker", new { bookingId= booking.Booking_Id })" class="btn btn-danger">Reject</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}
+<a href="@Url.Action("Worker_PageLoad", "Worker")" class="btn btn-primary">Back</a>
+

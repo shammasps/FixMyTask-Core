@@ -1,6 +1,9 @@
 ﻿@model List<FixMyTask_Core_Project.Models.Booking>
+@{
+    ViewData["IsWorker"] = true;
+}
 
-@if (Model.Count == 0)
+@* @if (Model.Count == 0)
 {
     <p>No Job Requests Available</p>
 }
@@ -51,4 +54,70 @@ else
 </div>
 }
 <a href="@Url.Action("Worker_PageLoad", "Worker")" class="btn btn-primary">Back</a>
+ *@
 
+
+
+<div class="container my-5">
+    <h2 class="text-center text-primary mb-4 fw-bold">Booking Requests</h2>
+
+    @if (Model.Count == 0)
+    {
+        <div class="alert alert-info text-center">
+            <strong>No job requests available at the moment.</strong>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive shadow-sm rounded bg-white p-3">
+            <table class="table table-bordered table-hover align-middle text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Client Name</th>
+                        <th>Category</th>
+                        <th>Booking Date</th>
+                        <th>Service Date</th>
+                        <th>Service Time</th>
+                        <th>User Address</th>
+                        <th>Remarks</th>
+                        <th>Paid</th>
+                        <th>Status</th>
+                        <th colspan="2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var booking in Model)
+                    {
+                        <tr>
+                            <td>@booking.UserName</td>
+                            <td>@booking.CategoryName</td>
+                            <td>@booking.Booking_Date.ToString("dd MMM yyyy")</td>
+                            <td>@booking.ServiceDate.ToString("dd MMM yyyy")</td>
+                            <td>@booking.ServiceTime</td>
+                            <td>@booking.User_Address</td>
+                            <td>@booking.Remarks</td>
+                            <td>@booking.Paid</td>
+                            <td>@booking.Booking_Status</td>
+                            <td>
+                                <a href="@Url.Action("AcceptBooking", "Worker", new { bookingId = booking.Booking_Id })" class="btn btn-sm btn-success">
+                                    <i class="bi bi-check-circle"></i> Accept
+                                </a>
+                            </td>
+                            <td>
+                                <a href="@Url.Action("RejectBooking", "Worker", new { bookingId = booking.Booking_Id })" class="btn btn-sm btn-danger">
+                                    <i class="bi bi-x-circle"></i> Reject
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Worker_PageLoad", "Worker")" class="btn btn-outline-primary px-4">
+            <i class="bi bi-arrow-left"></i> Back to Dashboard
+        </a>
+    </div>
+</div>

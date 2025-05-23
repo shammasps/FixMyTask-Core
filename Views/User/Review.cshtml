@@ -1,5 +1,8 @@
 ﻿@model FixMyTask_Core_Project.Models.UserReview
-
+@{
+    ViewData["IsWorker"] = false;
+}
+@* 
 <form asp-action="SubmitReview" method="post">
     <input type="hidden" asp-for="Worker_Id" />
     <input type="hidden" asp-for="User_Id" />
@@ -16,3 +19,61 @@
     <button type="submit" class="btn btn-success">Submit Review</button>
     <a href="@Url.Action("BookingStatusViewWorker", "User",new {workerId=Model.Worker_Id})" class="btn btn-success">Back</a>
 </form>
+ *@
+
+<div class="container mt-4">
+    <h3>Write a Review</h3>
+
+    <form asp-action="SubmitReview" method="post">
+        <input type="hidden" asp-for="Worker_Id" />
+        <input type="hidden" asp-for="User_Id" />
+        <input type="hidden" asp-for="Booking_Id" />
+
+        <div class="mb-3">
+            <label>Your Review</label>
+            <textarea class="form-control" asp-for="Review" required></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label>Your Rating</label>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="Rating" value="5" required /><label for="star5">★</label>
+                <input type="radio" id="star4" name="Rating" value="4" /><label for="star4">★</label>
+                <input type="radio" id="star3" name="Rating" value="3" /><label for="star3">★</label>
+                <input type="radio" id="star2" name="Rating" value="2" /><label for="star2">★</label>
+                <input type="radio" id="star1" name="Rating" value="1" /><label for="star1">★</label>
+            </div>
+        </div>
+        <input type="hidden" asp-for="ReviewDate" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+
+        <button type="submit" class="btn btn-success">Submit</button>
+        <a href="@Url.Action("BookingStatusViewWorker", "User",new {workerId=Model.Worker_Id})" class="btn btn-success">Back</a>
+    </form>
+</div>
+
+<style>
+    .star-rating {
+        direction: rtl;
+        display: inline-flex;
+        font-size: 2rem;
+        gap: 5px;
+    }
+
+    .star-rating input[type="radio"] {
+        display: none;
+    }
+
+    .star-rating label {
+        color: #ddd;
+        cursor: pointer;
+    }
+
+    .star-rating input[type="radio"]:checked ~ label {
+        color: #ffc107;
+    }
+
+    .star-rating label:hover,
+    .star-rating label:hover ~ label {
+        color: #ffc107;
+    }
+</style>

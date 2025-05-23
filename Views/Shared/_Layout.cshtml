@@ -7,55 +7,83 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FixMyTask_Core_Project.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FixMyTask_Core_Project</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Login_PageLoad">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="WorkerReg" asp-action="WorkerReg_PageLoad">Employee Registration</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UserReg" asp-action="UserReg_PageLoad">User Registartion</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<body class="d-flex flex-column min-vh-100">
+
+    @{
+        var hideNavbar = ViewData["HideNavbar"] as bool? ?? false;
+        var isWorker = ViewData["IsWorker"] as bool? ?? false;
+    }
+    @if (!hideNavbar)
+    {
+        <header style="margin-bottom: 70px;">
+            @if (!isWorker)
+            {
+                <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow-sm py-3 bt-4">
+                    <div class="container">
+                        <a class="navbar-brand fw-bold text-primary" asp-controller="User" asp-action="User_PageLoad">FIX MY TASK</a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link" asp-controller="User" asp-action="User_PageLoad">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-controller="User" asp-action="User_PageLoad" asp-fragment="categoriesSection">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-controller="User" asp-action="User_PageLoad" asp-fragment="workProcess">About Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#footer">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-controller="Login" asp-action="Login_PageLoad">Log In</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            }
+            else
+            {
+                <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow-sm py-3 bt-4">
+                    <div class="container">
+                        <a class="navbar-brand fw-bold text-primary" asp-controller="User" asp-action="User_PageLoad">FIX MY TASK</a>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link" asp-controller="Worker" asp-action="Worker_PageLoad">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-controller="Worker" asp-action="Worker_PageLoad">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                                <li class="nav-item"><a class="nav-link" asp-controller="Login" asp-action="Login_PageLoad">Log In</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            }
+
+
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    }
+    <div >
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer mt-auto" id="footer">
         <div class="container">
             &copy; 2025 - FixMyTask_Core_Project - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
 
+   
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.12/jquery.validate.unobtrusive.min.js"></script>
-
-
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

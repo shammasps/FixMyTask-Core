@@ -1,7 +1,9 @@
 ﻿@model FixMyTask_Core_Project.Models.WorkerModel
+@{
+    ViewData["IsWorker"] = true;
+}
 
-
-<h2>Welcome to @Model.WorkerName Your Dashboard</h2>
+@* <h2>Welcome to @Model.WorkerName Your Dashboard</h2>
 
 <div class="list-group">
     <a href="@Url.Action("EditProfile", "Worker")" class="list-group-item list-group-item-action">
@@ -17,3 +19,69 @@
          View Reviews & Ratings
     </a>
 </div>
+ *@
+
+<div class="container my-5">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold text-primary">Welcome, @Model.WorkerName</h2>
+        <p class="text-muted">Manage your profile, job requests, bookings, and reviews from here.</p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4">
+        <div class="col">
+            <a href="@Url.Action("EditProfile", "Worker")" class="text-decoration-none">
+                <div class="card h-100 shadow-sm border-0 hover-card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-person-circle display-4 text-primary"></i>
+                        <h5 class="card-title mt-3 fw-semibold">Edit Profile</h5>
+                        <p class="text-muted small">Update your personal information and photo.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="@Url.Action("ViewBookingRequests", "Worker")" class="text-decoration-none">
+                <div class="card h-100 shadow-sm border-0 hover-card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-briefcase-fill display-4 text-success"></i>
+                        <h5 class="card-title mt-3 fw-semibold">Job Requests</h5>
+                        <p class="text-muted small">Check and respond to job requests from users.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="@Url.Action("ManageBookingStatus", "Worker")" class="text-decoration-none">
+                <div class="card h-100 shadow-sm border-0 hover-card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-calendar-check-fill display-4 text-warning"></i>
+                        <h5 class="card-title mt-3 fw-semibold">Manage Bookings</h5>
+                        <p class="text-muted small">Update status of your current and future bookings.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col">
+            <a href="@Url.Action("Reviews", "Worker")" class="text-decoration-none">
+                <div class="card h-100 shadow-sm border-0 hover-card">
+                    <div class="card-body text-center">
+                        <i class="bi bi-star-fill display-4 text-danger"></i>
+                        <h5 class="card-title mt-3 fw-semibold">Reviews & Ratings</h5>
+                        <p class="text-muted small">View feedback given by users for your services.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .hover-card:hover {
+        transform: translateY(-5px);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+</style>

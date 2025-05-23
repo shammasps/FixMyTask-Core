@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\css\\userPageStyle.css",
+      "PackagePath": "staticwebassets\\css\\userPageStyle.css"
+    },
+    {
       "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -31,6 +35,10 @@
     {
       "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\Electrician.jpg",
       "PackagePath": "staticwebassets\\img\\Electrician.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\EmployeeReg Logo.jpg",
+      "PackagePath": "staticwebassets\\img\\EmployeeReg Logo.jpg"
     },
     {
       "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\Hitman_2015.jpg",
@@ -55,6 +63,14 @@
     {
       "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\IMG_0295.jpg",
       "PackagePath": "staticwebassets\\img\\IMG_0295.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\IMG_20150201_104141.jpg",
+      "PackagePath": "staticwebassets\\img\\IMG_20150201_104141.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\LoginLogo.png",
+      "PackagePath": "staticwebassets\\img\\LoginLogo.png"
     },
     {
       "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\Screenshot 2025-05-11 181316.png",
@@ -95,6 +111,10 @@
     {
       "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\plumber.jpg",
       "PackagePath": "staticwebassets\\img\\plumber.jpg"
+    },
+    {
+      "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\userPageLogo.png",
+      "PackagePath": "staticwebassets\\img\\userPageLogo.png"
     },
     {
       "Id": "F:\\shammas\\Luminar\\FixMyTask-Core Project\\FixMyTask-Core Project\\wwwroot\\img\\vehicle_service.jpeg",

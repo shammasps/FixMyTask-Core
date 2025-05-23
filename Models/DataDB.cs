@@ -347,6 +347,7 @@ namespace FixMyTask_Core_Project.Models
                         WorkerCountry = dr["Worker_Country"].ToString(),
                         WorkerState = dr["Worker_State"].ToString(),
                         WorkerCity = dr["Worker_City"].ToString(),
+                        WorkerPrice = Convert.ToInt64(dr["Price"]),
                         WorkerPhone = dr["Worker_Phone"].ToString(),
 
                     });
@@ -390,6 +391,7 @@ namespace FixMyTask_Core_Project.Models
                         WorkerState = dr["Worker_State"].ToString(),
                         WorkerCity = dr["Worker_City"].ToString(),
                         WorkerPhone = dr["Worker_Phone"].ToString(),
+                        WorkerPrice = Convert.ToInt64(dr["Price"]),
                         WorkerAddress = dr["Worker_Address"].ToString()                        
 
                     };

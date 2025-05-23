@@ -16,7 +16,6 @@ namespace FixMyTask_Core_Project.Models
         public long User_Phone { get; set; }
         [Required(ErrorMessage = "Address is required")]
         public string? User_Address { get; set; }
-        [Required(ErrorMessage = "Photo is required")]
         public string? User_Photo { get; set; }
         [Required(ErrorMessage = "Gender is required")]
         public string? User_Gender { get; set; }

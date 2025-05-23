@@ -1,5 +1,9 @@
 ﻿@model FixMyTask_Core_Project.Models.WorkerModel
 
+@{
+    ViewData["IsWorker"] = false;
+}
+@* 
 <h2>@Model.WorkerName 's Profile</h2>
 
 <div class="row">
@@ -17,13 +21,6 @@
         <p>State: @Model.WorkerState</p>
         <p>City: @Model.WorkerCity</p>
         <p>Address: @Model.WorkerAddress</p>
-
-        @* <h5>Certificates:</h5>
-        <ul>
-            <li>Electrical Course Certificate</li>
-            <li>Degree Certificate</li>
-            <!-- You can dynamically fetch certificates from a separate table if needed -->
-        </ul> *@
         <br />
         <h3>Booking</h3>
         <form asp-action="BookWorker" method="post">
@@ -50,4 +47,78 @@
         <br />
         <a asp-action="BookingStatusViewWorker" asp-route-workerId="@Model.WorkerId" class="btn btn-info mt-3">View Booking Status</a>
     </div>
+</div> *@
+
+<div class="container mt-4">
+    <div class="card shadow-lg border-0 p-4">
+        <h2 class="mb-4 text-center text-primary">@Model.WorkerName Profile</h2>
+
+        <div class="row">
+            <!-- Worker Image -->
+            <div class="col-md-4 text-center">
+                <img src="@Model.WorkerPhoto" alt="@Model.WorkerName" class="img-fluid rounded shadow-sm mb-3" style="max-height: 300px;" />
+            </div>
+
+            <!-- Worker Info -->
+            <div class="col-md-8">
+                <h4><strong>Name:</strong> @Model.WorkerName</h4>
+                <h5><strong>Category:</strong> @Model.Category_Name</h5>
+                <p><strong>Experience:</strong> @Model.WorkerExperience years</p>
+                <p><strong>Phone:</strong> @Model.WorkerPhone</p>
+                <p><strong>Email:</strong> @Model.WorkerEmail</p>
+                <p><strong>Country:</strong> @Model.WorkerCountry</p>
+                <p><strong>State:</strong> @Model.WorkerState</p>
+                <p><strong>City:</strong> @Model.WorkerCity</p>
+                <p><strong>Address:</strong> @Model.WorkerAddress</p>
+                <p><strong>Price:</strong> ₹ @Model.WorkerPrice</p>
+
+                <a asp-action="ShowReview" asp-route-workerId="@Model.WorkerId" class="btn btn-outline-info mt-2">⭐ Reviews & Ratings</a>
+            </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <!-- Booking Section -->
+        <div class="container">
+        <h3 class="text-success">Book a Service</h3>
+        <form asp-action="BookWorker" method="post">
+            <input type="hidden" name="Worker_Id" value="@Model.WorkerId" />
+
+            <div class="form-group p-2">
+                <label for="ServiceDate"><i class="fa-solid fa-calendar-days"></i> Service Date</label>
+                <input type="date" name="ServiceDate" class="form-control" required />
+            </div>
+
+            <div class="form-group p-2">
+                <label for="ServiceTime"><i class="fa-solid fa-clock"></i> Time Slot</label>
+                <select name="ServiceTime" class="form-control" required>
+                    <option value="">-- Select Time Slot --</option>
+                    <option value="9:00 AM - 12:00 PM">9:00 AM - 12:00 PM</option>
+                    <option value="1:30 PM - 3:30 PM">1:30 PM - 3:30 PM</option>
+                    <option value="4:30 PM - 9:00 PM">4:30 PM - 9:00 PM</option>
+                </select>
+            </div>
+
+            <div class="form-group p-2">
+                <label for="User_Address"><i class="fa-solid fa-map-marker-alt"></i>Your Address</label>
+                
+                <textarea type="text" name="User_Address" class="form-control" required></textarea>
+            </div>
+
+            <div class="form-group p-2">
+                <label for="Remarks"><i class="fa-solid fa-pen"></i> Remarks</label>
+                <textarea name="Remarks" class="form-control" rows="2" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success btn-block"><i class="fa-solid fa-check"></i> Book Now</button>
+        </form>
+        </div>
+
+        <div class="text-center mt-4">
+            <a asp-action="BookingStatusViewWorker" asp-route-workerId="@Model.WorkerId" class="btn btn-outline-primary">📖 View Booking Status</a>
+        </div>
+
+        <a href="@Url.Action("ViewWorkersByCategory", "User", new {CategoryId=Model.CategoryId})" class="btn btn-success mt-3">Back</a>
+    </div>
 </div>
+

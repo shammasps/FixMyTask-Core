@@ -1,5 +1,8 @@
 ﻿@model List<FixMyTask_Core_Project.Models.Booking>
-
+@{
+    ViewData["IsWorker"] = true;
+}
+@* 
 @if (Model.Count == 0)
 {
     <p>No Job Requests Available</p>
@@ -22,7 +25,7 @@ else
                     <th>Paid</th>
                     <th>Status</th>
                     <th>Action</th>
-                    @* <th>Reject Booking</th> *@
+                    
                 </tr>
             </thead>
             <tbody>
@@ -50,7 +53,7 @@ else
                             else if (booking.Booking_Status == "Completed" && booking.Paid=="No")
                             {
                                 <span class="text-danger">Payment is Not Received</span>
-                                @* <a href="@Url.Action("MoneyReceived", "Worker", new { bookingId= booking.Booking_Id })" class="btn btn-success">Money Received</a> *@
+                               
                             }
                             else if (booking.Booking_Status == "Completed" && booking.Paid=="Yes")
                             {
@@ -58,9 +61,6 @@ else
                             }
 
                         </td>
-                        @* <td>
-                            <a href="@Url.Action("RejectBooking", "Worker", new { bookingId= booking.Booking_Id })" class="btn btn-danger">Reject</a>
-                        </td> *@
                         
                     </tr>
                 }
@@ -68,4 +68,80 @@ else
         </table>
     </div>
 }
-<a href="@Url.Action("Worker_PageLoad", "Worker")" class="btn btn-success">Back</a>
+<a href="@Url.Action("Worker_PageLoad", "Worker")" class="btn btn-success">Back</a> *@
+
+<div class="container my-5">
+    <h2 class="text-center text-success mb-4 fw-bold">Manage Bookings</h2>
+
+    @if (Model.Count == 0)
+    {
+        <div class="alert alert-info text-center">
+            <strong>No Job Requests Available</strong>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive shadow-sm rounded bg-white p-3">
+            <table class="table table-bordered table-hover align-middle text-center">
+                <thead class="table-success">
+                    <tr>
+                        <th>Client Name</th>
+                        <th>Category</th>
+                        <th>Booking Date</th>
+                        <th>Service Date</th>
+                        <th>Service Time</th>
+                        <th>Address</th>
+                        <th>Remarks</th>
+                        <th>Paid</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var booking in Model)
+                    {
+                        <tr>
+                            <td>@booking.UserName</td>
+                            <td>@booking.CategoryName</td>
+                            <td>@booking.Booking_Date.ToString("dd MMM yyyy")</td>
+                            <td>@booking.ServiceDate.ToString("dd MMM yyyy")</td>
+                            <td>@booking.ServiceTime</td>
+                            <td>@booking.User_Address</td>
+                            <td>@booking.Remarks</td>
+                            <td>@booking.Paid</td>
+                            <td>@booking.Booking_Status</td>
+                            <td>
+                                @if (booking.Booking_Status == "Accepted")
+                                {
+                                    <a href="@Url.Action("ReachedLocation", "Worker", new { bookingId= booking.Booking_Id })" class="btn btn-sm btn-outline-primary">
+                                        <i class="bi bi-geo-alt-fill"></i> Reached
+                                    </a>
+                                }
+                                else if (booking.Booking_Status == "Reached")
+                                {
+                                    <a href="@Url.Action("CompleteWork", "Worker", new { bookingId= booking.Booking_Id })" class="btn btn-sm btn-outline-success">
+                                        <i class="bi bi-check-circle"></i> Complete
+                                    </a>
+                                }
+                                else if (booking.Booking_Status == "Completed" && booking.Paid == "No")
+                                {
+                                    <span class="text-danger fw-semibold">Payment Pending</span>
+                                }
+                                else if (booking.Booking_Status == "Completed" && booking.Paid == "Yes")
+                                {
+                                    <span class="text-success fw-semibold">Payment Completed</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+    <div class="text-center mt-4">
+        <a href="@Url.Action("Worker_PageLoad", "Worker")" class="btn btn-outline-success px-4">
+            <i class="bi bi-arrow-left-circle"></i> Back to Dashboard
+        </a>
+    </div>
+</div>

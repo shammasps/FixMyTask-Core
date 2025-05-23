@@ -10,18 +10,6 @@ namespace FixMyTask_Core_Project.Controllers
         {
             return View();
         }
-
-        //public IActionResult UserHome()
-        //{
-        //    return View();
-        //}
-
-        //public IActionResult WorkerHome()
-        //{
-        //    return View();
-        //}
-
-
         public IActionResult Login_Click(Login clsobj)
         {
             if (ModelState.IsValid)

@@ -16,7 +16,6 @@ namespace FixMyTask_Core_Project.Controllers
         public IActionResult Worker_PageLoad()
         {
             var workerId = Convert.ToInt32(HttpContext.Session.GetInt32("uid"));
-
             var worker = db.GetWorkerById(workerId);
             
             return View(worker);
@@ -32,7 +31,9 @@ namespace FixMyTask_Core_Project.Controllers
         public IActionResult EditProfileClick(WorkerModel model,IFormFile file)
         {
             var workerId = Convert.ToInt32(HttpContext.Session.GetInt32("uid"));
+            var existingWorker = db.GetWorkerById(workerId);
             model.WorkerId = workerId;
+
 
             if (file != null && file.Length > 0)
             {
@@ -47,6 +48,10 @@ namespace FixMyTask_Core_Project.Controllers
                     file.CopyTo(fileStream);
                 }
                 model.WorkerPhoto = "/img/" + fileName;
+            }
+            else
+            {
+                model.WorkerPhoto = existingWorker.WorkerPhoto;
             }
 
             var workerUpdate = db.UpdateWorkerDetails(model);

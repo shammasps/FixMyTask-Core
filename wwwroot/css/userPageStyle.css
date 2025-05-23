@@ -1,0 +1,71 @@
+﻿.top-image {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+    .top-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 700px;
+}
+
+.overlay-text h1 {
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.overlay-text p {
+font-size: 1.5rem;
+margin-bottom: 20px;
+}
+
+.category-form .form-select {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.category-form .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+.category-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+    .category-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    .category-card img {
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    .category-card .card-body {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }

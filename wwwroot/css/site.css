@@ -17,6 +17,10 @@ html {
   min-height: 100%;
 }
 
+footer {
+    color: #ffffff;
+    background-color: #0F1B31;
+}
 body {
-  margin-bottom: 60px;
+    background-color: #E6E9F4;
 }

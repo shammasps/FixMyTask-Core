@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FixMyTask-Core Project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd0e4d35050589a3365c7451455f61ff3b3720cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a499572f2bc0e80a3ebecce41d0bff4221269df")]
 [assembly: System.Reflection.AssemblyProductAttribute("FixMyTask-Core Project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FixMyTask-Core Project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

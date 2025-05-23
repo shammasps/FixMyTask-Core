@@ -21,9 +21,6 @@ namespace FixMyTask_Core_Project.Controllers
             ViewBag.Categories = new SelectList(categories, "Category_Id", "Category_Name");
             return View();
         }
-
-
-
         public IActionResult WorkerReg_Click(WorkerInsert clsobj, IFormFile file)
         {
             try

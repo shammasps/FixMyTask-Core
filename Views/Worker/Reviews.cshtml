@@ -1,5 +1,8 @@
 ﻿@model List<FixMyTask_Core_Project.Models.UserReviewModel>
-<h2>Reviews</h2>
+@{
+    ViewData["IsWorker"] = true;
+}
+@* <h2>Reviews</h2>
 
 @if (Model == null)
 {
@@ -32,4 +35,38 @@ else
     <a href="@Url.Action("Worker_PageLoad", "Worker")" class="btn btn-success mt-3">Back</a>
 }
 
+ *@
 
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-center text-primary">Customer Reviews</h2>
+
+    @if (Model == null || !Model.Any())
+    {
+        <div class="alert alert-warning text-center">No Reviews Available</div>
+    }
+    else
+    {
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            @foreach (var review in Model)
+            {
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-secondary">@review.User_Name</h5>
+                            <p class="card-text">@review.Review</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <small class="text-muted">Date: @review.ReviewDate.ToShortDateString()</small><br />
+                            <span class="badge bg-warning text-dark mt-1">Rating: @review.Rating / 5</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="@Url.Action("Worker_PageLoad", "Worker")" class="btn btn-success">Back</a>
+        </div>
+    }
+</div>

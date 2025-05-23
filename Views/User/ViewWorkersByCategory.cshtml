@@ -1,23 +1,47 @@
-﻿    @model List<FixMyTask_Core_Project.Models.WorkerModel>
+﻿@model List<FixMyTask_Core_Project.Models.WorkerModel>
+@{
+    ViewData["IsWorker"] = false;
+}
 
-<h2>Workers in this Category</h2>
-
-<a href="@Url.Action("User_PageLoad", "User")" class="btn btn-success mt-3">Back</a>
-
-<div class="row">
-    @foreach (var worker in Model)
+    <div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-primary">Available Workers</h2>
+        <a href="@Url.Action("User_PageLoad", "User")#categoriesSection" class="btn btn-outline-success">← Back to Categories</a>
+    </div>
+    @if (Model == null || !Model.Any())
     {
-        <div class="col-md-3">
-            <div class="card mb-3" style="width: 275px;">
-                <img src="@worker.WorkerPhoto" class="card-img-top" alt="@worker.WorkerName" style="height: 217px;" />
-                <div class="card-body">
-                    <h5 class="card-title">@worker.WorkerName</h5>
-                    <h5 class="card-title">@worker.Category_Name</h5>
-                    <p class="card-text">@worker.WorkerExperience years experience</p>
-                    <p class="card-text">@worker.WorkerCity, @worker.WorkerState</p>
-                    <a href="@Url.Action("WorkerProfile", new { workerId = worker.WorkerId })" class="btn btn-primary">View Profile</a>
+        <div class="alert alert-warning text-center my-5 fs-5"> No Workers Available in This Category</div>
+    }
+    else
+    {
+
+    <div class="row g-4">
+        @foreach (var worker in Model)
+        {
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card shadow-sm h-100 border-0">
+                    <img src="@worker.WorkerPhoto" class="card-img-top rounded-top" alt="@worker.WorkerName" style="height: 220px;" />
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold">@worker.WorkerName</h5>
+                        <p class="text-muted mb-1">@worker.Category_Name</p>
+                        <p class="small mb-1"><strong>Experience:</strong> @worker.WorkerExperience years</p>
+                        <p class="small mb-1"><i class="bi bi-geo-alt-fill text-danger"></i> @worker.WorkerCity, @worker.WorkerState</p>
+                        <p class="small mb-3"><strong>Price:</strong> ₹@worker.WorkerPrice</p>
+                        <a href="@Url.Action("WorkerProfile", new { workerId = worker.WorkerId })" class="btn btn-primary w-100">View Profile</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        }
+    </div>
     }
 </div>
+
+
+
+<style>
+    .card:hover {
+        transform: scale(1.02);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    }
+</style>

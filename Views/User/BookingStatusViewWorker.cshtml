@@ -1,5 +1,8 @@
 ﻿
 @model List<FixMyTask_Core_Project.Models.Booking>
+@{
+    ViewData["IsWorker"] = false;
+}
 <h2>Booking Status</h2>
 
 @if (Model == null)
@@ -88,5 +91,5 @@ else
         </tbody>
     </table>
 
-    <a href="@Url.Action("User_PageLoad", "User")" class="btn btn-success mt-3">Back</a>
+    <a href="@Url.Action("WorkerProfile", "User", new {workerId=ViewBag.WorkerId})" class="btn btn-success mt-3">Back</a>
 }

@@ -56,6 +56,7 @@ namespace FixMyTask_Core_Project.Controllers
         {
             var userId =Convert.ToInt32(HttpContext.Session.GetInt32("uid"));
             var booking = db.GetBookingByUserAndWorker(userId, workerId);
+            ViewBag.WorkerId = workerId;
             return View(booking);
         }
         public IActionResult WithdrawBooking(int bookingId)
@@ -96,6 +97,7 @@ namespace FixMyTask_Core_Project.Controllers
         public IActionResult ShowReview(int workerId)
         {
             var ShowReview = db.GetReviewbyWorker(workerId);
+            ViewBag.WorkerId = workerId;
             return View(ShowReview);
         }
 

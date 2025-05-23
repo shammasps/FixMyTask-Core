@@ -1,24 +1,91 @@
 ﻿@model List<FixMyTask_Core_Project.Models.Category>
+<link rel="stylesheet" href="~/css/userPageStyle.css" asp-append-version="true" />
+@{
+    ViewData["IsWorker"] = false;
+}
 
-<h1>This is User Page</h1>
 
-<h2>Browse Categories</h2>
-<br />
+<div class="top-image">
+    <img src="~/img/userPageLogo.png" class="img-fluid" alt="Banner Image" />
+    <div class="overlay-text">
+        <h1>Your Task, Our Expert</h1>
+        <p>Get It Done Today!</p>
 
-<br />
+        <form method="get" asp-controller="User" asp-action="ViewWorkersByCategory" class="category-form">
+            <div class="input-group mt-4">
+                <select class="form-select" name="categoryId">
+                    <option selected disabled value="">Choose a Category</option>
+                    @foreach (var category in Model)
+                    {
+                        <option value="@category.Category_Id">@category.Category_Name</option>
+                    }
+                </select>
+                <button type="submit" class="btn btn-warning">Search</button>
+            </div>
+        </form>
+    </div>
+</div>
 
-<div class="row">
-    @foreach (var category in Model)
-    {
-        <div class="col-md-3">  
-            <div class="card">
-                <img src="~/img/@category.Category_Image" class="card-img-top" alt="@category.Category_Name">
-                <div class="card-body">
-                    <h5 class="card-title">@category.Category_Name</h5>
-                    <a href="@Url.Action("ViewWorkersByCategory", new { categoryId = category.Category_Id })" class="btn btn-primary">View Workers</a>
+
+<div class="container py-5" id="categoriesSection">
+    <h2 class="text-center mb-4">Explore Our Categories</h2>
+    <div class="row g-4">
+        @foreach (var category in Model)
+        {
+            <div class="col-md-6 col-lg-3">
+                <div class="category-card card h-100 shadow-sm border-0">
+                    <img src="~/img/@category.Category_Image" class="card-img-top" alt="@category.Category_Name">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@category.Category_Name</h5>
+                        <a href="@Url.Action("ViewWorkersByCategory", new { categoryId = category.Category_Id })" class="btn btn-outline-primary mt-2">View Workers</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<section class="py-5 text-center" id="workProcess">
+    <div class="container">
+        <h6 class="text-primary mb-2">OUR WORK PROCESS</h6>
+        <h2 class="fw-bold mb-5">How it Works?</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-3 mb-4">
+                <div class="bg-white p-4 rounded shadow-sm h-100">
+                    <div class="mb-3 text-primary" style="font-size: 40px;">
+                        <i class="bi bi-person-plus"></i>
+                    </div>
+                    <h5>Register</h5>
+                    <p>Create your account to get started and access all features.</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="bg-white p-4 rounded shadow-sm h-100">
+                    <div class="mb-3 text-primary" style="font-size: 40px;">
+                        <i class="bi bi-search"></i>
+                    </div>
+                    <h5>See Workers</h5>
+                    <p>Browse through available workers based on category or location.</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="bg-white p-4 rounded shadow-sm h-100">
+                    <div class="mb-3 text-primary" style="font-size: 40px;">
+                        <i class="bi bi-calendar-check"></i>
+                    </div>
+                    <h5>Book Worker</h5>
+                    <p>Select a worker and book them for your preferred time.</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="bg-white p-4 rounded shadow-sm h-100">
+                    <div class="mb-3 text-primary" style="font-size: 40px;">
+                        <i class="bi bi-check2-circle"></i>
+                    </div>
+                    <h5>Work Complete</h5>
+                    <p>The worker completes the job and you rate the service.</p>
                 </div>
             </div>
         </div>
-    }
-</div>
-    
+    </div>
+</section>

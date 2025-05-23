@@ -1,126 +1,169 @@
-﻿
-@model FixMyTask_Core_Project.Models.WorkerInsert
+﻿@model FixMyTask_Core_Project.Models.WorkerInsert
+@{
+    ViewData["HideNavbar"] = true;
+}
 
+<section class="h-100 bg-dark">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <div class="card card-registration my-4">
+                    <div class="row g-0">
+                        <div class="col-xl-6 d-none d-xl-block">
+                            <img src="~/img/EmployeeReg Logo.jpg"
+                                 alt="Sample photo" class="img-fluid"
+                                 style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;height: -webkit-fill-available;" />
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card-body p-md-5 text-black">
+                                <h3 class="mb-5 text-uppercase">Worker Registration</h3>
+                                <form asp-action="WorkerReg_Click" class="form-horizondal" enctype="multipart/form-data" method="post">
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input asp-for="Worker_Name" type="text" id="form3Example8" class="form-control form-control-lg" placeholder="Name" />
+                                        <span asp-validation-for="Worker_Name" class="text-danger"></span>
+                                    </div>
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input asp-for="Worker_Email" type="email" id="form3Example97" class="form-control form-control-lg" placeholder="Email Id" />
+                                        <span asp-validation-for="Worker_Email" class="text-danger"></span>
+                                    </div>
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input asp-for="Worker_Phone" type="number" id="form3Example97" class="form-control form-control-lg" placeholder="Phone Number" />
+                                        <span asp-validation-for="Worker_Phone" class="text-danger"></span>
+                                    </div>
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <textarea asp-for="Worker_Address" type="text" id="form3Example8" class="form-control form-control-lg" placeholder="Address"></textarea>
+                                        <span asp-validation-for="Worker_Address" class="text-danger"></span>
+                                    </div>
 
-<form asp-action="WorkerReg_Click" class="form-horizondal" enctype="multipart/form-data" method="post">
-    <div class="form-group">
-        <label class="control-label">Name</label>
-        <input asp-for="Worker_Name" class="form-control" id="t1" />
-        <span asp-validation-for="Worker_Name" class="text-danger"></span>
-    </div>
+                                    <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
 
-    <div class="form-group">
-        <label class="control-label">Email</label>
-        <input asp-for="Worker_Email" class="form-control" id="t2" />
-        <span asp-validation-for="Worker_Email" class="text-danger"></span>
-    </div>
+                                        <h6 class="mb-0 me-4">Gender: </h6>
 
-    <div class="form-group">
-        <label class="control-label">Phone Number</label>
-        <input asp-for="Worker_Phone" class="form-control" id="t3" />
-        <span asp-validation-for="Worker_Phone" class="text-danger"></span>
-    </div>
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input asp-for="Worker_Gender" class="form-check-input" type="radio" name="Worker_Gender" value="Female" id="genderFemale" />
+                                            <label class="form-check-label" for="femaleGender">Female</label>
+                                        </div>
 
-    <div class="form-group">
-        <label class="control-label">Photo</label>
-        <input type="file" name="file" asp-for="Worker_Photo" class="form-control" id="t4" required />
-        
-    </div>
+                                        <div class="form-check form-check-inline mb-0 me-4">
+                                            <input asp-for="Worker_Gender" class="form-check-input" type="radio" name="Worker_Gender" value="Male" id="genderMale" />
+                                            <label class="form-check-label" for="maleGender">Male</label>
+                                        </div>
+                                        <span asp-validation-for="Worker_Gender" class="text-danger"></span>
 
-    <div class="form-group">
-        <label class="control-label">Gender</label><br />
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" asp-for="Worker_Gender" name="Worker_Gender" value="Male" id="genderMale" />
-            <label class="form-check-label" for="genderMale">Male</label>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <input asp-for="Worker_Country" type="text" id="form3Example1m" class="form-control form-control-lg" placeholder="Country" />
+                                                <span asp-validation-for="Worker_Country" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-4">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <input asp-for="Worker_State" type="text" id="form3Example1n" class="form-control form-control-lg" placeholder="State" />
+                                                <span asp-validation-for="Worker_State" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <input asp-for="Worker_City" type="text" id="form3Example1m" class="form-control form-control-lg" placeholder="City" />
+                                                <span asp-validation-for="Worker_City" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <input asp-for="Worker_Exp" type="text" id="form3Example1n" class="form-control form-control-lg" placeholder="Experience" />
+                                                <span asp-validation-for="Worker_Exp" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6 mb-4">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <select class="form-control form-control-lg" id="Category_Id" name="Category_Id">
+                                                    <option value="">Select Category</option>
+                                                    @if (ViewBag.Categories is SelectList categories)
+                                                    {
+                                                        foreach (var category in categories)
+                                                        {
+                                                            <option value="@category.Value">@category.Text</option>
+                                                        }
+                                                    }
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 mb-4">
+                                            <div data-mdb-input-init class="form-outline">
+                                                <input asp-for="Worker_Price" type="text" id="form3Example99" class="form-control form-control-lg" placeholder="Expense -RS-" />
+                                                <span asp-validation-for="Worker_Price" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    @* <div data-mdb-input-init class="form-outline mb-4">
+                                        <select class="form-control" id="Category_Id" name="Category_Id">
+                                            <option value="">Select Category</option>
+                                            @if (ViewBag.Categories is SelectList categories)
+                                            {
+                                                foreach (var category in categories)
+                                                {
+                                                    <option value="@category.Value">@category.Text</option>
+                                                }
+                                            }
+                                        </select>
+                                    </div>
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input asp-for="Worker_Price" type="text" id="form3Example99" class="form-control form-control-lg" placeholder="Expense -RS-" />
+                                        <span asp-validation-for="Worker_Price" class="text-danger"></span>
+                                    </div> *@
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <textarea asp-for="Worker_Description" type="text" id="form3Example99" class="form-control form-control-lg" placeholder="Description"></textarea>
+                                        <span asp-validation-for="Worker_Description" class="text-danger"></span>
+                                    </div>
+
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input asp-for="Username" type="text" id="form3Example99" class="form-control form-control-lg" placeholder="Username" />
+                                        <span asp-validation-for="Username" class="text-danger"></span>
+                                    </div>
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input asp-for="Password" type="text" id="form3Example99" class="form-control form-control-lg" placeholder="Password" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <input asp-for="cPassword" type="text" id="form3Example99" class="form-control form-control-lg" placeholder="Conform Password" />
+                                        <span asp-validation-for="cPassword" class="text-danger"></span>
+                                    </div>
+                                    <div data-mdb-input-init class="form-outline mb-4">
+                                        <label class="form-label" for="form3Example99">Profile Photo</label>
+                                        <input asp-for="Worker_Photo" name="file" type="file" class="form-control form-control-lg" required />
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 d-flex pt-3">
+                                            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-warning btn-lg ms-2">Register</button>
+                                        </div>
+                                        <div class="col-md-6 pt-3 mt-2">
+                                            <span class="text-muted">Already have an account?</span>
+                                            <a href="@Url.Action("Login_PageLoad", "Login")">Log in</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" asp-for="Worker_Gender" name="Worker_Gender" value="Female" id="genderFemale" />
-            <label class="form-check-label" for="genderFemale">Female</label>
-        </div>
-        <span asp-validation-for="Worker_Gender" class="text-danger"></span>
     </div>
+</section>
 
-    <div class="form-group">
-        <label class="control-label">Address</label>
-        <input asp-for="Worker_Address" class="form-control" id="t6" />
-        <span asp-validation-for="Worker_Address" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label class="control-label">Country</label>
-        <input asp-for="Worker_Country" class="form-control" id="t7" />
-        <span asp-validation-for="Worker_Country" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label class="control-label">State</label>
-        <input asp-for="Worker_State" class="form-control" id="t8" />
-        <span asp-validation-for="Worker_State" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label class="control-label">City</label>
-        <input asp-for="Worker_City" class="form-control" id="t9" />
-        <span asp-validation-for="Worker_City" class="text-danger"></span>
-    </div>
-
-
-    <div class="form-group">
-        <label for="Category_Id">Category</label>
-        <select class="form-control" id="Category_Id" name="Category_Id">
-            <option value="">Select Category</option>
-            @if (ViewBag.Categories is SelectList categories)
-            {
-                foreach (var category in categories)
-                {
-                    <option value="@category.Value">@category.Text</option>
-                }
-            }
-        </select>
-        
-    </div>
-
-
-    <div class="form-group">
-        <label class="control-label">Experience</label>
-        <input asp-for="Worker_Exp" class="form-control" id="t10" />
-        <span asp-validation-for="Worker_Exp" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label class="control-label">Price</label>
-        <input asp-for="Worker_Price" class="form-control" id="t10" />
-        <span asp-validation-for="Worker_Price" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label class="control-label">Description</label>
-        <input asp-for="Worker_Description" class="form-control" id="t10" />
-        <span asp-validation-for="Worker_Description" class="text-danger"></span>
-    </div>
-
-
-    <div class="form-group">
-        <label class="control-label">Username</label>
-        <input asp-for="Username" class="form-control" id="t11" />
-        <span asp-validation-for="Username" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label class="control-label">Password</label>
-        <input asp-for="Password" class="form-control" id="t12"/>
-        <span asp-validation-for="Password" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label class="control-label">Conform Password</label>
-        <input asp-for="cPassword" class="form-control" id="t13"/>
-        <span asp-validation-for="cPassword" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <input type="submit" value="Insert" class="btn btn-success" />
-    </div>
-</form>
 @{
     if (@TempData["msg"] != null)
     {

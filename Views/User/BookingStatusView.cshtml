@@ -1,4 +1,8 @@
 ﻿@model FixMyTask_Core_Project.Models.Booking
+@{
+    ViewData["IsWorker"] = false;
+}
+<div class="container mt-4">
 
 <h2>Booking Status</h2>
 
@@ -37,4 +41,6 @@ else if (Model.Paid == "Yes")
     <div class="alert alert-success">Payment completed. Thank you!</div>
 }
 
-<a href="@Url.Action("User_PageLoad", "User")" class="btn btn-success ml-2">Back</a>
+    <a href="@Url.Action("WorkerProfile", "User",new {workerId=Model.Worker_Id})" class="btn btn-success ml-2">Back</a>
+
+</div>
